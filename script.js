@@ -17,11 +17,12 @@ const maxYesWidth = parseFloat(yesButtonStyle.maxWidth);
 
 // ASSETS
 const gifs = [
-  "assets/images/togepi-happy.gif",
+  //  "assets/images/togepi-happy.gif", //edited out to separate happy gif
   "assets/images/togepi-sad-1.gif",
   "assets/images/togepi-sad-2.gif",
   "assets/images/togepi-crying.gif",
   "assets/images/togepi-crying-2.gif",
+  "assets/images/squirtle-crying.gif",
 ];
 const buttonMessages = [
   "???Are you sure??",
@@ -44,9 +45,7 @@ const buttonMessages2 = [
 // NO BUTTON CLICK LOGIC
 noButton.addEventListener("click", () => {
   // Change GIF
-  if (noClicks < maxNoClicks) {
-    gifElement.src = gifs[noClicks];
-  }
+  gifElement.src = gifs[noClicks % gifs.length];
   // Update NO button text
   noButton.textContent = buttonMessages[noClicks % maxNoClicks];
 
@@ -62,6 +61,9 @@ noButton.addEventListener("click", () => {
   if (noScale > minNoScale) {
     noScale -= 0.1;
     noButton.style.transform = `scale(${noScale})`;
+    yesButton.addEventListener("click", () => {
+      gifElement.src = "assets/images/togepi-happy.gif";
+    });
   }
 
   // Grow YES button (using actual rendered width)
