@@ -21,7 +21,7 @@ const gifs = [
   "assets/images/togepi-sad-1.gif",
   "assets/images/togepi-sad-2.gif",
   "assets/images/togepi-crying.gif",
-  "assets/images/togepi-sad-1.gif",
+  "assets/images/togepi-crying-2.gif",
 ];
 const buttonMessages = [
   "???Are you sure??",
