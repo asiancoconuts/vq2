@@ -28,17 +28,17 @@ const buttonMessages = [
   "Ji-won please PLEASE",
   "My heart can't take it",
   "You can't do this to me!",
-  "I beg you to reconsider（>﹏<）",
+  "Please reconsider!!（>﹏<）",
 ];
 const buttonMessages2 = [
   "You want to click here!",
   "I think you misclicked",
   "Ok... please click here",
+  "Click HERE for Levi",
   "...Yes... please...(´•︵•`)",
   "PLZPLZZPLZPZLZPLZ",
-  "I promise this one is correct",
-  "Just click it already please im gonna cry",
-  "Pretty please with a Bangchan or Levi on top",
+  "Click for SKZ VIP TIX",
+  "haha... click here...",
 ];
 
 // NO BUTTON CLICK LOGIC

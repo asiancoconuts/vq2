@@ -101,7 +101,7 @@ button:hover {
     height: 304px;
     object-fit: cover;
   }
-  h2:first-of-type {
+  h1:first-of-type {
     margin-top: 30px; /* adjust to taste */
   }
   h1 {
