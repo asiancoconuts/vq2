@@ -22,27 +22,33 @@
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
-      function fireworkBurst(x) {
+      function fireworkBurst() {
+        const x = Math.random(); // random horizontal position
         confetti({
           particleCount: 80,
           spread: 60,
           startVelocity: 50,
-          decay: 0.92,   // sparkle trail effect
-          ticks: 100,    // longer particle life = more shimmer
-          scalar: 1.2,   // slightly larger particles
+          decay: 0.92,
+          ticks: 100,
+          scalar: 1.2,
           origin: { x, y: 0.6 }
         });
       }
     
-      const burstIntervals = [0, 400, 800, 1200, 1600];
-      burstIntervals.forEach((delay, i) => {
-        setTimeout(() => {
-          const x = 0.2 + 0.15 * (i % 3); // left, center, right
-          fireworkBurst(x);
-        }, delay);
-      });
-    </script>  
+      const startTime = Date.now();
+      const duration = 10000; // 10 seconds
     
+      function scheduleRandomBurst() {
+        const now = Date.now();
+        if (now - startTime < duration) {
+          fireworkBurst();
+          const nextDelay = 200 + Math.random() * 600; // 200–800ms
+          setTimeout(scheduleRandomBurst, nextDelay);
+        }
+      }
+    
+      scheduleRandomBurst();
+    </script>
 </script>
   </body>
 </html>
