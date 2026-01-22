@@ -40,12 +40,12 @@ const buttonMessages = [
   "Ji-won please PLEASE",
   "My heart can't take it",
   "You can't do this to me!",
-  "Please reconsider!!（>﹏<）",
+  "Please reconsider!（>﹏<）",
   "Valentines alone...",
   "I'll pretend I'm not hurt",
-  "You're sure? like… sure-sure?",
+  "You're like ..super sure?",
   "I respect your decision :(",
-  "Noted and journaled (◡︵◡)",
+  "Noted and journaled💔💔",
 ];
 const buttonMessages2 = [
   "You want to click here!",
